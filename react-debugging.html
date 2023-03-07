@@ -64,12 +64,17 @@
         }
         // No need to change anything ABOVE this line ^
 
+// i added shuffle to the onClick because it was completely missing.
+// i added the JSX fragment at the bottom and top of the return. 
+// the drawCard onClick was not in camelCase so onclick was not doing anything.
+      
         return (
+          <>
           <h1>Draw a Card</h1>
-          <button onClick={}>
+          <button onClick={drawCard}>
             Click to Draw a Card
           </button>
-          <button onclick={shuffle}>
+          <button onClick={shuffle}>
             Return Cards and Shuffle Deck
           </button>
           <div style={handStyles}>
@@ -81,8 +86,9 @@
               )
             })}
           </div>
+          </>
         )
-      }
+        }
 
       // No need to change anything below this line
 
